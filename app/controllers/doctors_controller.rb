@@ -40,8 +40,8 @@ class DoctorsController < ApplicationController
 
   def destroy
 
-    @artist.destroy
-    redirect_to artists_path
+    @doctor.destroy
+    redirect_to patients_path
   end
 
   private
