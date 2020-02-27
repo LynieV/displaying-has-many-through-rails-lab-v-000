@@ -27,6 +27,16 @@ class DoctorsController < ApplicationController
   end
 
   def update
+    @doctor = Doctor.find(params[:id])
+
+    @doctor.update(doctor_params)
+
+    if @doctor.save
+      redirect_to @doctor
+    else
+      render :edit
+    end
+
   end
 
   def destroy
