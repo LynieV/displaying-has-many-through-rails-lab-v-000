@@ -27,7 +27,6 @@ class DoctorsController < ApplicationController
   end
 
   def update
-    @doctor = Doctor.find(params[:id])
 
     @doctor.update(doctor_params)
 
@@ -40,7 +39,6 @@ class DoctorsController < ApplicationController
   end
 
   def destroy
-    @doctor = Doctor.find(params[:id])
 
     @artist.destroy
     redirect_to artists_path
