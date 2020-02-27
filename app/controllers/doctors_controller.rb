@@ -46,6 +46,8 @@ class DoctorsController < ApplicationController
     redirect_to artists_path
   end
 
+  private
+
   def find_doctor
     @doctor = Doctor.find(params[:id])
   end
