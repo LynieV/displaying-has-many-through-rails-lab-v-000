@@ -3,3 +3,6 @@
 <%= @doctor.name %>
 <br>
 <%= @doctor.department %>
+<br>
+<% @doctor.appointments.each do |a| %>
+  <% @doctor_patient = @doctor.patients.find(a.patient_id) %>
