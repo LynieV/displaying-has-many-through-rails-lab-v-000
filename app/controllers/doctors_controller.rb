@@ -4,6 +4,10 @@ class DoctorsController < ApplicationController
     @doctors = Doctor.all
   end
 
+  def show
+    @doctor = Doctor.find(params[:id])
+  end
+
   def new
     @doctor = Doctor.new
   end
@@ -16,10 +20,6 @@ class DoctorsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
-    @doctor = Doctor.find(params[:id])
   end
 
   def edit
