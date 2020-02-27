@@ -1,5 +1,7 @@
 class DoctorsController < ApplicationController
 
+  before_action :find_doctor, only: [:show, :edit]
+
   def index
     @doctors = Doctor.all
   end
@@ -46,4 +48,7 @@ class DoctorsController < ApplicationController
     redirect_to artists_path
   end
 
+  def find_doctor
+    @doctor = Doctor.find(params[:id])
+  end
 end
